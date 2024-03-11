@@ -13,8 +13,11 @@ find_package(rviz_rendering REQUIRED)
 find_package(rviz_ogre_vendor REQUIRED)
 find_package(pluginlib REQUIRED)
 find_package(Qt5 REQUIRED COMPONENTS Widgets)
+find_package(std_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
 
-include_directories(src ${OGRE_INCLUDE_DIRS} ${OGRE_INCLUDE_DIRS}/Paging)
+include_directories(${OGRE_INCLUDE_DIRS} ${OGRE_INCLUDE_DIRS}/Paging)
+include_directories(./include/)
 
 set(CMAKE_AUTOMOC ON)
 

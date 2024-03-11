@@ -4,15 +4,9 @@
             close all displays
         </description>
     </class>
-
-    <class name="rviz_plugin_test/MyArrow" type="rviz_plugin_test::MyArrow" base_class_type="rviz_common::Display">
-        <description>
-          My arrow
-        </description>
+    <class name="rviz_plugin_test/TwistPanel" type="rviz_plugin_test::TwistPanel" base_class_type="rviz_common::Panel">
+      <description>
+        Publish geometry_msgs/msg/Twist
+      </description>
     </class>
-      <class name="rviz_plugin_test/PubTwist" type="rviz_plugin_test::PubTwist" base_class_type="rviz_common::Panel">
-        <description>
-          Publish geometry_msgs/msg/Twist
-        </description>
-      </class>
 </library>
