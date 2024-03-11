@@ -49,6 +49,33 @@ namespace rviz_plugin_test
             virtual void onInitialize();
             virtual void load(const rviz_common::Config &config);
             virtual void save(rviz_common::Config config) const;
+
+        public Q_SLOTS:
+            void tick();
+
+        protected:
+            rclcpp::Node::SharedPtr node;
+
+            rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr twist_publisher;
+            rclcpp::Publisher<geometry_msgs::msg::TwistStamped>::SharedPtr twist_stamped_publisher;
+
+            QCheckBox* enable_check;
+            QLineEdit* topic_edit;
+
+            QCheckBox* stamped_check;
+            QLineEdit* frame_edit;
+
+            QRadioButton* radio1_;
+            QRadioButton* radio2_;
+
+            QLineEdit* max1_edit_;
+            QLineEdit* max2_edit_;
+            QLineEdit* max3_edit_;
+
+            TouchWidget* touch_;
+
+            bool pub_stamped;
+            std::string pub_frame;
     };
 }
 
